@@ -9,16 +9,19 @@ import java.util.Scanner;
 
 public class UC1 {
 	File file=new File("countries of the world.csv");
-	public void readFile() throws FileNotFoundException {
+	int count=0;
+	public int readFile() throws FileNotFoundException {
 		Scanner scanner=new Scanner(file);
 		while(scanner.hasNext()) {
 			String countryDetails=scanner.nextLine();
 			if(countryDetails.contains("India")) {
 				System.out.println(countryDetails);
+				count++;
 			}
 		
 			
 		}
+		return count;
 	}
 	
 }
