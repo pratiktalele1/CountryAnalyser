@@ -8,9 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UC1 {
-	File file=new File("countries of the world.csv");
 	int count=0;
-	public int readFile() throws FileNotFoundException {
+	public int readFile(File file) throws FileNotFoundException {
 		Scanner scanner=new Scanner(file);
 		while(scanner.hasNext()) {
 			String countryDetails=scanner.nextLine();
